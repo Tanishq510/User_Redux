@@ -40,12 +40,10 @@ export default function App() {
    * function to handle search
    */
   const handleSearch = (searchKey) => {
-    if (searchKey) {
-      let filteredUser = users.filter((user) => {
-        return user.name.first.toLowerCase().includes(searchKey.trim());
-      });
-      setTableUsers(filteredUser);
-    }
+    let filteredUser = users.filter((user) => {
+      return user.name.first.toLowerCase().includes(searchKey.trim());
+    });
+    setTableUsers(filteredUser);
   };
   const columns = [
     {
